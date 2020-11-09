@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.Serialization;
-using System.Text;
 
-namespace matematica
+
+namespace Matematica
 {
-    class FunzioniMatematica
+    public class FunzioniMatematica
     {
         public static int Somma(int a, int b)
         {
@@ -40,7 +37,7 @@ namespace matematica
             long potenza = 1;
             for (i = 0; i < b; i++)
             {
-                potenza = potenza * a;
+                potenza *= a;
             }
             return potenza;
         }
@@ -63,28 +60,28 @@ namespace matematica
             int max = Math.Max(n1, Math.Max(n2, n3));
             return max;
         }
-        public static double inverso(double a)
+        public static double Inverso(double a)
         {
             double inverso = a * -1;
             return inverso;
         }
-        public static bool isPari(int a)
+        public static bool IsPari(int a)
         {
             return a % 2 == 0;
         }
-        public static bool isdispari(int a)
+        public static bool IsDispari(int a)
         {
-            return a % 2 == 1;
+            return !IsPari(a);
         }
-        public static bool isPositivo(int a)
+        public static bool IsPositivo(int a)
         {
             return a > 0;
         }
-        public static bool isNegativo(int a)
+        public static bool IsNegativo(int a)
         {
             return a < 0;
         }
-        public static bool isIntero(double a)
+        public static bool IsIntero(double a)
         {
             return a==(int)a;
         }
